@@ -1,0 +1,18 @@
+.form-input{
+    margin-bottom: 14px;
+}
+.form-input label{
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 700;
+    display: block;
+}
+.form-input input{
+    border: 1px solid #dbdbdb;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    width: 100%;
+}

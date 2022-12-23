@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, .8);
+}
+.container{
+    margin: 20px auto 0px;
+    max-width: calc(100% - 40px);
+    width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+h3{
+    margin: 0px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width: 40vw;
+    }
+}

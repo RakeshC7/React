@@ -1,0 +1,19 @@
+.userform_list{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.userform_list > li{
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border: 1px solid #dbdbdb;
+}
+.userform_list > li > span{
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 600;
+    text-transform: capitalize;
+}
