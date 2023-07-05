@@ -1,0 +1,36 @@
+header {
+  padding: 20px 20px;
+}
+#logo {
+  display: block;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+}
+.list > li {
+  margin-left: 20px;
+}
+.list > li > a {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.list > li > a:hover {
+  color: aquamarine;
+}
+.list > li > a.active {
+  color: blueviolet;
+  text-decoration: underline;
+}
