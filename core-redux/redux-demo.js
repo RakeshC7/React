@@ -1,3 +1,6 @@
+// install package.json : npm init -y
+// install redux : npm i redux
+
 const redux = require('redux');
 
 const CounterReducer = (state = { counter: 0 }, action) => {

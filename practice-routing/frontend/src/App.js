@@ -39,12 +39,16 @@ import EventsDetailsPage from './pages/Events';
 import NewEventPage from './pages/NewEvent';
 import EditEventPage from './pages/EditEvent';
 import EventsRoot from './pages/EventsRoot';
+import ErrorPage from './pages/Error';
 
 function App() {
 
   const router = createBrowserRouter([
     {
-      path: '/', element: <RootLayout />, children: [
+      path: '/',
+      element: <RootLayout />,
+      errorElement: <ErrorPage />,
+      children: [
         { index: true, element: <HomePage /> },
         {
           path: 'events', element: <EventsRoot />, children: [
