@@ -1,0 +1,87 @@
+/* -=- Font Family -=- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;300;500;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+h1,
+.h1 {
+  margin: 0px 0px 18px;
+  font: normal normal 800 100px/100px 'Open Sans';
+  letter-spacing: 0px;
+  color: #101820;
+}
+h2,
+.h2 {
+  font: normal normal 800 45px/61px 'Open Sans';
+  letter-spacing: 0px;
+  color: #101820;
+}
+h3,
+.h3 {
+  font: normal normal bold 35px/47px 'Open Sans';
+  letter-spacing: 3.5px;
+  color: #101820;
+  text-transform: uppercase;
+}
+h4,
+.h4 {
+  margin: 0px 0px 11px;
+  font: normal normal bold 28px/38px 'Open Sans';
+  letter-spacing: 0px;
+  color: #101820;
+}
+h5,
+.h5 {
+  font: normal normal bold 18px/24px Open Sans;
+  letter-spacing: 0px;
+  color: #101820;
+}
+p {
+  margin: 0px;
+  font: normal normal normal 18px/34px 'Open Sans';
+  letter-spacing: 0px;
+  color: #101820;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.siteLogo {
+  max-width: 231px;
+  display: inline-block;
+}
+section {
+  position: relative;
+}
+
+.container {
+  margin: 0px auto;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1340px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container {
+    width: 1640px;
+  }
+}

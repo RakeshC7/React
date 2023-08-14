@@ -1,0 +1,13 @@
+.bannerInfo {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 670px);
+  transform: translateY(-50%);
+}
+.bannerImageWrapper {
+  margin-left: auto;
+  max-width: 64.3%;
+}
+.bannerImageWrapper img {
+  max-width: 100%;
+}

@@ -1,0 +1,19 @@
+.socialIconList {
+  display: flex;
+}
+.socialIconList li {
+  margin-right: 10px;
+}
+.socialIconList li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e03c31;
+}
+.socialIconList li a img {
+  max-width: 18px;
+}

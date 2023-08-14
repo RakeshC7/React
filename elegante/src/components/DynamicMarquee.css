@@ -1,0 +1,18 @@
+#marquee {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 13px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #e03c31;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.marqueeInner {
+  margin: 0px 50px;
+}

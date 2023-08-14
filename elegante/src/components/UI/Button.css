@@ -1,0 +1,39 @@
+.themeButton {
+  padding: 17px 51px 15px;
+  background-color: #fff;
+  outline: none;
+  display: inline-block;
+  border: 2px solid #101820;
+  border-radius: 40px;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #101820;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s linear;
+}
+.darkButton {
+  background-color: #101820;
+  color: #fff;
+}
+.dangerButton {
+  background-color: #e03c31;
+  border-color: #e03c31;
+  color: #fff;
+}
+.themeButton:hover {
+  background-color: #101820;
+  color: #fff;
+}
+.darkButton:hover {
+  background-color: #fff;
+  color: #101820;
+}
+.dangerButton:hover {
+  background-color: #fff;
+  color: #e03c31;
+}
