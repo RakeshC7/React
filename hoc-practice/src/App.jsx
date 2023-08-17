@@ -1,12 +1,14 @@
-import UserList from './UserList'
+import SearchUsers from './UserList'
 import './App.css';
+import TodoList from './TodoList';
 
 function App() {
 
   return (
-    <>
-      <UserList />
-    </>
+    <div className='Wrapper'>
+      <SearchUsers />
+      <TodoList />
+    </div>
   )
 }
 

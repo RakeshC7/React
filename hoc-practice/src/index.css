@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+body {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+.Wrapper {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+input {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 10px;
+  width: 400px;
+}
+input:focus,
+input:focus:active {
+  outline: none;
+}
