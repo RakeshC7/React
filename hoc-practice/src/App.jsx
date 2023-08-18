@@ -1,15 +1,12 @@
-import SearchUsers from './UserList'
-import './App.css';
-import TodoList from './TodoList';
+import "./App.css";
+import SearchTodos from "./TodoList";
+import SearchUser from "./UserList";
 
-function App() {
-
+export default function App() {
   return (
-    <div className='Wrapper'>
-      <SearchUsers />
-      <TodoList />
+    <div className="App">
+      <SearchUser />
+      <SearchTodos />
     </div>
-  )
+  );
 }
-
-export default App

@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import withHoc from './withHoc';
 
 const UserList = ({ data }) => {
