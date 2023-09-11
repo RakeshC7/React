@@ -1,7 +1,9 @@
-import { Fragment, useReducer } from "react";
+import { Fragment, useState, useReducer } from "react";
 import bookData from "../../lib/book.json";
+import availableColors from "../../lib/availableColors.json";
 import BookSearch from "./BookSearch";
 import Button from "../UI/Button";
+import './BookList.css';
 
 const bookReducer = (state, action) => {
   switch (action.type) {
@@ -27,17 +29,26 @@ const BookList = () => {
   const desiredKeys = ["isbn", "author", "title", "cover colors", "action"];
 
   const handleAddBook = (book) => {
-    dispatch({ type: "ADD_BOOK", book });
+    if (books.some((existingBook) => existingBook.isbn === book.isbn)) {
+      alert('book already exists');
+    } else {
+      dispatch({ type: "ADD_BOOK", book });
+    }
   };
 
   const handleRemoveBook = (isbn) => {
     dispatch({ type: "REMOVE_BOOK", isbn });
   };
 
+
   return (
     <>
       <div>
-        <BookSearch searchData={bookData} onBookSelect={handleAddBook} />
+        <BookSearch
+          searchData={bookData}
+          onBookSelect={handleAddBook}
+          selectedBooks={books}
+          availableColors={availableColors} />
       </div>
       <div className="table-responsive">
         <table>
@@ -51,25 +62,47 @@ const BookList = () => {
             </tr>
           </thead>
           <tbody>
-            {books.length === 0 ? (
-              <tr>
-                <td colSpan={desiredKeys.length}>No books in table</td>
-              </tr>
-            ) : (
-              books?.map((book, bookIndex) => (
-                <tr key={"rowNum" + bookIndex}>
-                  <td>{book.isbn}</td>
-                  <td>{book.author}</td>
-                  <td>{book.title}</td>
-                  <td>{book.coverColors.join(", ")}</td>
-                  <td>
-                    <Button onClick={() => handleRemoveBook(book.isbn)}>
-                      Remove
-                    </Button>
-                  </td>
+            {
+              books.length === 0 ? (
+                <tr>
+                  <td colSpan={desiredKeys.length}>No books in table</td>
                 </tr>
-              ))
-            )}
+              ) : (
+                books?.map((book, bookIndex) => (
+                  <tr key={"rowNum" + bookIndex}>
+                    <td>{book.isbn}</td>
+                    <td>{book.author}</td>
+                    <td>{book.title}</td>
+                    <td>
+                      {
+                        // empty coverColor Data
+                        book.coverColors.length === 0 && '-'
+                      }
+                      {book.coverColors?.map((colorName, index) => {
+                        const foundColor = availableColors.find((color) => color.name === colorName)
+                        if (foundColor) {
+                          return (
+                            <span
+                              key={index}
+                              className="bookCoverColorSpan"
+                              title={colorName}
+                              style={{ backgroundColor: foundColor.hex }}
+                            >
+                              {/* {colorName} */}
+                            </span>
+                          );
+                        }
+                        return null;
+                      })}
+                    </td>
+                    <td>
+                      <Button onClick={() => handleRemoveBook(book.isbn)}>
+                        Remove
+                      </Button>
+                    </td>
+                  </tr>
+                ))
+              )}
           </tbody>
         </table>
       </div>

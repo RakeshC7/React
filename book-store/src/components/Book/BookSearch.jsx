@@ -5,6 +5,7 @@ import "./BookSearch.css";
 const BookSearch = ({ searchData, onBookSelect }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
+    const [noResult, setNoResult] = useState(false);
 
     const handleBookSearch = (e) => {
         const searchText = e.target.value;
@@ -15,10 +16,14 @@ const BookSearch = ({ searchData, onBookSelect }) => {
                 const results = searchData.filter((book) =>
                     book.title.toLowerCase().includes(searchText.toLowerCase())
                 );
+
+                results.length === 0 ? setNoResult(true) : setNoResult(false);
+
                 setSearchResults(results);
             }
         } else {
             setSearchResults([]);
+            setNoResult(false);
         }
     };
 
@@ -26,6 +31,7 @@ const BookSearch = ({ searchData, onBookSelect }) => {
         onBookSelect(selectedBook);
         setSearchTerm("");
         setSearchResults([]);
+        setNoResult(false);
     };
 
     return (
@@ -37,6 +43,13 @@ const BookSearch = ({ searchData, onBookSelect }) => {
                     onChange={handleBookSearch}
                     value={searchTerm}
                 />
+                {
+                    noResult && (
+                        <ul className="resultedDropBox">
+                            <li className="noResult">Book not available</li>
+                        </ul>
+                    )
+                }
                 {searchResults.length !== 0 && (
                     <ul className="resultedDropBox">
                         {searchResults.map((book) => (

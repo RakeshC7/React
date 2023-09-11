@@ -1,0 +1,22 @@
+[
+    {
+    "name": "red",
+    "hex": "#f00"
+    },
+    {
+    "name": "blue",
+    "hex": "#00f"
+    },
+    {
+    "name": "yellow",
+    "hex": "#efff40"
+    },
+    {
+    "name": "black",
+    "hex": "#000"
+    },
+    {
+    "name": "white",
+    "hex": "#fff"
+    }
+]

@@ -33,3 +33,10 @@
 .resultedDropBox > li:nth-child(even) {
   background-color: rgb(23 23 23);
 }
+.resultedDropBox > li.noResult {
+  text-align: center;
+  color: #938d8d;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
