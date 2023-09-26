@@ -2,10 +2,8 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
     todos: [{
-        id: 1, text: 'Hello', completed: false
-    }, {
-        id: 2, text: 'Hello maro sambhado', completed: false
-    }],
+        id: 1, text: 'Hello World !!', completed: false
+    },],
 }
 
 const todoSlice = createSlice({

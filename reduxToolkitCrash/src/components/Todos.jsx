@@ -4,16 +4,18 @@ import { removeTodo } from './../features/todo/todoSlice'
 
 const Todos = () => {
     const todos = useSelector((state) => state.todo.todos);
-    console.log(todos);
     const dispatch = useDispatch();
     return (
         <>
-            <h1>Todo List</h1>
+            <h2 className='text-left'>Todo List</h2>
             <ul className='list-none'>
+                {
+                    todos.length === 0 && <li className='mt-4 text-sm text-center text-zinc-500 bg-zinc-800 px-4 py-2 rounded'>Todo list is empty !</li>
+                }
                 {
                     todos?.map((todo) => (
                         <li
-                            className='mt-4 flex justify-content items-center bg-zinc-800 px-4 py-2 rounded'
+                            className='mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded'
                             key={todo.id}
                         >
                             <span className='text-white'>{todo.text}</span>
