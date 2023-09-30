@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import RootLayout from './pages/RootLayout';
 import HomePage from './pages/Home';
 import CartPage from './pages/Cart';
 import './App.css';
-import { Provider } from 'react-redux';
 
 import store from './store/store';
 

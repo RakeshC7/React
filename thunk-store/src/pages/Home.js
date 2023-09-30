@@ -9,7 +9,6 @@ const HomePage = () => {
                     <span>Products List</span>
                 </h2>
                 <Products />
-
             </section>
         </div>
     )

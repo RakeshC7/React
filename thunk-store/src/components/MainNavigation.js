@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Classes from './MainNavigation.module.css';
 import { useSelector } from 'react-redux';
+import Classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
 
