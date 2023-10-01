@@ -43,8 +43,9 @@ const productSlice = createSlice({
                 state.status = STATUSES.ERROR;
             });
     }
-
 });
+
+
 
 export const { setProducts, setStatus } = productSlice.actions;
 export default productSlice.reducer;

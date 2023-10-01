@@ -11,7 +11,7 @@ const Products = () => {
 
     useEffect(() => {
         dispatch(fetchProducts());
-    }, []);
+    }, [dispatch]);
 
     if (status === STATUSES.LOADING) return <h2>Loading...</h2>
     if (status === STATUSES.ERROR) return <h2>Something Went wrong!</h2>
