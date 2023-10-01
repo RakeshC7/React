@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../store/productSlice';
-import { add } from './../store/cartSlice'
+import { add } from './../store/cartSlice';
+import { STATUSES } from '../store/productSlice';
 
 const Products = () => {
 
@@ -11,6 +12,9 @@ const Products = () => {
     useEffect(() => {
         dispatch(fetchProducts());
     }, []);
+
+    if (status === STATUSES.LOADING) return <h2>Loading...</h2>
+    if (status === STATUSES.ERROR) return <h2>Something Went wrong!</h2>
 
     return (
         <div>
