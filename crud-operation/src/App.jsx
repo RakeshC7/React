@@ -1,14 +1,10 @@
 import './App.css';
-import { useDataContext } from './context/dataContext';
+import Home from './components/Home';
 
 function App() {
-  const data = useDataContext();
-
   return (
     <>
-      {data.map((item) => (
-        <div key={item.id}>{item.id}</div>
-      ))}
+      <Home />
     </>
   );
 }

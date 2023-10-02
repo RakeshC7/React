@@ -24,11 +24,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: #242424;
 }
 
 h1 {
@@ -53,6 +49,30 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.inputboxColor {
+  background-color: #2c3034;
+  color: #fff;
+  border-color: #606060;
+}
+.inputboxColor:focus {
+  background-color: #2c3034;
+  color: #fff;
+  box-shadow: none;
+}
+
+.inputboxColor::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.inputboxColor::-moz-placeholder {
+  color: #aaaaaa;
+}
+.inputboxColor:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.inputboxColor:-moz-placeholder {
+  color: #aaaaaa;
 }
 
 @media (prefers-color-scheme: light) {
