@@ -19,7 +19,8 @@ const Home = () => {
                 editData[action.payload.index] = action.payload.row;
                 return editData;
             case 'IS_DELETE':
-                const filteredData = state.filter((item, index) => )
+                const filteredData = state.filter((item, index) => item)
+                return filteredData;
 
             default: return state;
         }
